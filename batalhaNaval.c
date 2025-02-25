@@ -5,15 +5,44 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    int tabuleiro[10][10]; //matriz 10x10 para o jogo
+    int tabuleiro[10][10]; // Matriz 10x10 para o jogo
 
-    //iniciando o tabuleiro com agua
-    for(int i = 0, i < 10, i++) {
-        for(int j = 0, i < 10, i++) {
+    // Inicializa o tabuleiro com água (0)
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
             tabuleiro[i][j] = 0;
         }
     }
-    
+
+    //posicionando primeiro barco na horizontal
+    //b3, c3, d3
+    tabuleiro[2][1] = 3;
+    tabuleiro[2][2] = 3;
+    tabuleiro[2][3] = 3;
+
+    //posicionando segundo barco na vertical
+    tabuleiro[2][8] = 3;
+    tabuleiro[3][8] = 3;
+    tabuleiro[4][8] = 3;
+
+    printf(" TABULEIRO BATALHA NAVAL \n");
+    // Impressão do cabeçalho das colunas
+    printf("   "); // Espaço para alinhar os números da coluna
+    char colunas[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+    for (int j = 0; j < 10; j++) {
+        printf(" %c", colunas[j]);
+    }
+    printf("\n");
+
+    // Impressão das linhas com os números e a matriz do tabuleiro
+    for (int i = 0; i < 10; i++) {
+        printf("%2d ", i + 1); // Exibir os números das linhas
+        for (int j = 0; j < 10; j++) {
+            printf(" %d", tabuleiro[i][j]); // Exibir o conteúdo do tabuleiro
+        }
+        printf("\n");
+    }
+        
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
