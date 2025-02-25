@@ -5,6 +5,15 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    int tabuleiro[10][10]; //matriz 10x10 para o jogo
+
+    //iniciando o tabuleiro com agua
+    for(int i = 0, i < 10, i++) {
+        for(int j = 0, i < 10, i++) {
+            tabuleiro[i][j] = 0;
+        }
+    }
+    
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
